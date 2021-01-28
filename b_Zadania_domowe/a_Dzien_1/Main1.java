@@ -40,5 +40,5 @@ public class Main1 {
 
     public String query19 = "SELECT SUM(price) AS sum_nonactive_nopromoted FROM offers WHERE status = 1 AND expire < NOW() AND promoted = 0";
 
-    public String query20 = "";
+    public String query20 = "SELECT ROUND(AVG(price), 2) AS avg_price FROM dump.offers WHERE status = 1 AND expire > NOW() AND promoted = 1";
 }
